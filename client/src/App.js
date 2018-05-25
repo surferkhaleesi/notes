@@ -30,7 +30,7 @@ class App extends Component {
         <h1>Notes App</h1>
         <button onClick={() => this.showNewTopicform()}> Create New Topic</button>
         {topicForm}
-        <ul>{this.state.topics.map((t)=><li>{t}</li>)}</ul>
+        <ul>{this.state.topics.map((t)=><div><button>Edit Topic Title!</button>{t}<button>Take Me To ToPICS pAGE!</button></div>)}</ul>
       </div>
     );
   }
