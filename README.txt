@@ -1,4 +1,4 @@
-#Notes App
+# Notes App
 A space for your notes :)
 
 ** Stack**: React, Express, PostgresSQL, Node
