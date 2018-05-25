@@ -1,7 +1,7 @@
-# Notes App
+# Notes App &#x1F4D7;
 A space for your notes :)
 
-** Stack**: React, Express, PostgresSQL, Node
+**_Stack_**: React, Express, PostgresSQL, Node
 
 Hi!
 
@@ -11,7 +11,7 @@ Setup/Installation Instructions:
 	-npm install (dependencies are in package.json)
 	-command to start server & frontend
 		-npm start ( for both)
-	### DB setup
+### &#x1F53B;DB setup
 		-used PostgreSQL w/ cmd line package
 		##Create a database 'notes' with the following tables
 				
@@ -47,13 +47,13 @@ Setup/Installation Instructions:
 		file_id (INT)
 
 
-### Current Features List:
+### &#x1F53B;Current Features List:
 	-first page- nodes w/pictures & topics title
 	-second page- finder-like page for each node/topic
 	-third page- file clicked on on page two.
-### Later features List:
+### &#x1F53B;Later features List:
 	-login page
 	-further interactivity ( being able to insert a node into another node)
 	-instead of api do scraping
 
-### Link to project rules:https://github.com/Techtonica/curriculum/blob/master/projects/final-project/final-project.md 
+### &#x1F53B;Link to project rules:https://github.com/Techtonica/curriculum/blob/master/projects/final-project/final-project.md 
