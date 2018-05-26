@@ -1,30 +1,22 @@
 var express = require('express');
-
+const User= require('../models/users.js');
 // const client = require('../connection');
 var router = express.Router();
 
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  // res.send('respond with a resource');
-   res.json([
-   		{id: 1, username: "somebody"},
-		{id: 2, username: "somebody_else"},
-
-   	]);
+router.get('/:id', function(req, res){
+  User.findById(req.params.id).then(user => {
+     res.send(user);
+  });
 });
 
-// client.connect((err)=> {
-// 	if(!err){
-// 		  client.query('INSERT INTO topics (name) VALUES (\'books2\')', (err, res)=>{
-// 		  	if(err){
-// 		  		console.log(err);
-// 		  	}else{
-// 		  		console.log(res);
-// 		  	}
-// 		  });
 
-// 	}
-// });
+/* GET users listing. */
+router.get('/', function(req, res) {
+  User.findAll().then(users => {
+    res.send(users);
+  });
+});
+
 
 module.exports = router;
