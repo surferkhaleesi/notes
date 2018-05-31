@@ -6,7 +6,7 @@ var router = express.Router();
 
 router.get('/:id', function(req, res){
   User.findById(req.params.id).then(user => {
-     res.send(user);
+     res.send(JSON.parse(JSON.stringify(user)));
   });
 });
 
@@ -14,7 +14,7 @@ router.get('/:id', function(req, res){
 /* GET users listing. */
 router.get('/', function(req, res) {
   User.findAll().then(users => {
-    res.send(users);
+    res.send(JSON.parse(JSON.stringify(users)));
   });
 });
 
