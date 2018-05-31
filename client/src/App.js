@@ -13,8 +13,7 @@ class App extends Component {
     this.state = {
       topicForms: false,
       topicInputForm: "",
-      topics: [],
-      dbdata: null
+      topics: []
     }
   }
 
@@ -26,11 +25,13 @@ class App extends Component {
     //   });
     callApi('/topics/1')
       .then(res => {
-        var data = JSON.parse(JSON.stringify(res));
         this.setState({
-          dbdata: data
-        });
-        console.log(this.state.dbdata);
+          topics: res
+        })
+        console.log(this.state.topics);
+      })
+      .catch((err)=>{
+        console.log(err);
       });
   }
 
@@ -51,7 +52,18 @@ class App extends Component {
         <h1>Notes App</h1>
         <button onClick={() => this.showNewTopicform()}> Create New Topic</button>
         {topicForm}
-        <ul>{this.state.topics.map((t)=><div><button>Edit Topic Title!</button>{t}<button>Take Me To ToPICS pAGE!</button></div>)}</ul>
+        <ul>
+          {
+            this.state.topics.map((t) => {
+              return (<div>
+                <button>Edit Topic Title!</button>
+                  {t.name}
+                <button>Take Me To ToPICS pAGE!</button>
+              </div>)
+              }
+            )
+          }
+        </ul>
       </div>
     );
 
@@ -61,7 +73,6 @@ class App extends Component {
   }
   saveToPage(event){
     event.preventDefault();
-    
     this.setState({
       topics: this.state.topics.concat([this.state.topicInputForm]),
       topicForms:false
