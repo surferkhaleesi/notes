@@ -1,13 +1,10 @@
 const Sequelize = require('sequelize');
 
-
-
-function createdbconnection(){ 
-  return new Sequelize('notes', 'jason','blah',{
+function createdbconnection(){
+  return new Sequelize('notes', 'tsl_3','password',{
     host: 'localhost',
-    dialect: 'postgres' 
+    dialect: 'postgres'
   });
 };
 
-module.exports= createdbconnection;
-
+module.exports = createdbconnection;
