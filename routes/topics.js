@@ -19,22 +19,17 @@ router.get('/:user_id', function(req, res) {
 });
 
 // /* Post to topics f */
-// router.post('/:user_id', function(req, res) {
+router.post('/:user_id', function(req, res) {
+  console.log("req.params.user_id:", req.params.user_id)
+  console.log("req.body:", req.body)
+  Topics.create({
+      user_id: req.params.user_id, name: req.body.name
+    })
+    .then(newtopic => {
+      res.send(JSON.parse(JSON.stringify(newtopic)));
+  });
+});
 
-// });
-//   Topics.update({
-//     name: ______
-//   },{
-//     where: {user_id:req.params.user_id},
-//     returning= true,
-//     plain=true
-//     /*
-// returning: true option to tell Sequelize to return the object & plain: true is just to return the object itself and not the other messy meta data that might not be useful.*/
-//   })
-//     .then(function(result) => {
-//       console.log(result);
-//   });
-// });
 
 
 module.exports = router;

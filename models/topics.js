@@ -5,10 +5,10 @@ const sequelize = createdbconnection();
 const Topics = sequelize.define(
   'topic',
   {
-    id: {
-      type: Sequelize.INTEGER ,
-      primaryKey:true
-    },
+    // id: {
+    //   type: Sequelize.INTEGER ,
+    //   primaryKey:true
+    // },
     name: Sequelize.STRING,
     user_id: Sequelize.INTEGER
   },
@@ -18,4 +18,4 @@ const Topics = sequelize.define(
   }
 );
 
-module.exports= Topics; 
+module.exports= Topics;

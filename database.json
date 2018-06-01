@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "host": "localhost",
+    "user": "tsl_3",
+    "password" : "password",
+    "database": "notes",
+    "driver": "postgresql",
+    "multipleStatements": true
+  }
+}
