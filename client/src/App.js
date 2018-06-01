@@ -73,10 +73,22 @@ class App extends Component {
   }
   saveToPage(event){
     event.preventDefault();
+
+
+    var topic = {name: this.state.topicInputForm};
     this.setState({
-      topics: this.state.topics.concat([this.state.topicInputForm]),
+      topics: this.state.topics.concat([topic]),
       topicForms:false
     })
+    // console.log("save to page:" + JSON.stringify(this.state.topics))
+          fetch('./topics/1', {
+            method: 'post',
+            headers: {
+              'Accept': 'application/json, text/plain, */*',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(topic)
+          }).then(res => console.log(res));
 
   }
   setTopicName(e){
