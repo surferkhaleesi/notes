@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "client": "cd client && npm start",
-    "server": "nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
-    "start": "server"
+    "dev": "concurrently --kill-others-on-fail \"nodemon app.js\" \"npm client\"",
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
