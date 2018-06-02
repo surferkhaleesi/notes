@@ -20,7 +20,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static('client/build'));
+app.get('/', function(req,res) {
+  res.sendfile('client/build/index.html');
+});
+
+app.use('/static', express.static('client/build/static'))
 app.use('/users', usersRouter);
 app.use('/topics',topicsRouter);
 
