@@ -24,6 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/topics',topicsRouter);
+app.use(express.static('client/build'));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
