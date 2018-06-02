@@ -41,7 +41,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3002, function() {
-  console.log("listening on port 3002...");
+app.listen(process.env.PORT || 3002, function() {
+  console.log("listening on port 3002 or the heroku one ...");
 });
 module.exports = app;

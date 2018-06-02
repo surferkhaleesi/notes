@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "client": "cd client && yarn start",
+    "client": "cd client && npm start",
     "server": "nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "yarn install && yarn dev"
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
+    "start": "server"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
