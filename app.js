@@ -18,13 +18,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
+
 // app.use(express.static(path.join(__dirname, 'public')));
-// 
-// app.get('/', function(req,res) {
-//   res.sendfile('client/build/index.html');
-// });
 //
-// app.use('/static', express.static('client/build/static'))
+
+app.get('/', function(req,res) {
+  res.sendfile('client/build/index.html');
+});
+//
+app.use('/static', express.static('client/build/static'))
 app.use('/users', usersRouter);
 app.use('/topics',topicsRouter);
 
