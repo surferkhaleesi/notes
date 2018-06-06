@@ -20,18 +20,17 @@ const Topics = sequelize.define(
 
 module.exports= Topics;
 
-
 // 'use strict';
 // module.exports = (sequelize, DataTypes) => {
-//   var Topic = sequelize.define('Topic', {
-//     id:{type: DataTypes.INTEGER, autoIncrement: true, primaryKey:true, allowNull:false},
+//   var Notes = sequelize.define('Notes', {
+//     id:{type: DataTypes.INTEGER, autoIncrement: true, primaryKey:true, allowNull:false}
 //     name: DataTypes.STRING,
-//     user_id: {type: DataTypes.INTEGER}
+//     topics_id: {type: DataTypes.INTEGER}
 //   }, {
 //     timestamps: false
 //   });
-//   Topic.associate = function(models) {
+//   Notes.associate = function(models) {
 //     // associations can be defined here
 //   };
-//   return Topic;
+//   return Notes;
 // };

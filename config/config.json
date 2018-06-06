@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "tsl_3",
+    "password": "password",
+    "database": "notes",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "production": {
+    "username": "vyyeyqcepetaog",
+    "password": "786bd0bda298af0d4ad7f4bd6610d666b6753ba3694c8a59c9f885bf0dc5524b",
+    "database": "dd5265g5i2t8jpb",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  }
+}

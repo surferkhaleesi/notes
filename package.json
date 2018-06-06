@@ -6,19 +6,26 @@
     "client": "cd client && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm app.js\" \"npm client\"",
     "start": "node app.js",
-    "postinstall":"cd client && npm install && npm run build"
+    "postinstall": "cd client && npm install && npm run build"
   },
   "dependencies": {
+    "auth0-js": "^9.6.0",
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",
     "constantinople": "^3.1.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "http-errors": "~1.6.2",
     "jade": "^1.11.0",
     "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "pg-promise": "^8.4.4",
+    "react": "^16.4.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "sequelize": "^4.37.10",
     "tree": "^0.1.3"
   }

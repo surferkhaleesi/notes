@@ -5,6 +5,7 @@
     "password" : "password",
     "database": "notes",
     "driver": "postgresql",
+    "dialect": "postrgres",
     "multipleStatements": true
   }
 }

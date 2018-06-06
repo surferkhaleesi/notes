@@ -1,5 +1,5 @@
 var express = require('express');
-const Topics= require('../models/topics.js');
+const Notes= require('../models/notes.js');
 // const client = require('../connection');
 var router = express.Router();
 
@@ -10,7 +10,7 @@ var router = express.Router();
 // });
 
 /* GET users listing. */
-router.get('/:user_id', function(req, res) {
+router.get('/:topic_id', function(req, res) {
   Topics.findAll({where: {user_id:req.params.user_id}}).then(topics => {
     res.send(JSON.parse(JSON.stringify(topics)));
   });
@@ -27,7 +27,5 @@ router.post('/:user_id', function(req, res) {
       res.send(JSON.parse(JSON.stringify(newtopic)));
   });
 });
-
-
 
 module.exports = router;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 async function callApi(route) {
   var response = await fetch(route);
@@ -16,7 +17,7 @@ class App extends Component {
       topics: []
     }
   }
-
+//check if your front end makes an APi call on ComponentDidMount
   componentDidMount() {
     // callApi('/users')
     //   .then(res => {
@@ -28,7 +29,6 @@ class App extends Component {
         this.setState({
           topics: res
         })
-        console.log(this.state.topics);
       })
       .catch((err)=>{
         console.log(err);
