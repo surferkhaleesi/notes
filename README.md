@@ -56,4 +56,3 @@ Setup/Installation Instructions:
 	-further interactivity ( being able to insert a node into another node)
 	-instead of api do scraping
 
-### &#x1F53B;Link to project rules:https://github.com/Techtonica/curriculum/blob/master/projects/final-project/final-project.md 
